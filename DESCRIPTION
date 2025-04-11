@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The purpose of the package is to centralise the functions used by all instances of energydash.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -12,3 +12,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 URL: https://github.com/mayala-esc/escvenergydash
 BugReports: https://github.com/mayala-esc/escvenergydash/issues
+Imports: 
+    highcharter,
+    markdown,
+    scales,
+    shiny,
+    shinydashboard
