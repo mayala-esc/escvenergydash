@@ -1,7 +1,7 @@
 
 # Define UI for application ----
 ui <- function() {
-  
+
   custom_header <- shinydashboard::dashboardHeader()
   custom_header$children[[2]] <- NULL
   custom_header <- custom_header %>%
@@ -13,8 +13,8 @@ ui <- function() {
         div(class = "col", badge_vec())
         )
       )
-  
-  
+
+
   shinydashboard::dashboardPage(
     title = "Victorian Energy Pricing Dashboard",
     header = custom_header,
@@ -39,11 +39,7 @@ ui <- function() {
                                   ),
                                   shinydashboard::menuItem("Methodology", tabName = "methodology"),
                                   shinydashboard::menuItem("Disclaimer", tabName = "disclaimer")
-                                    #shinydashboard::menuItem("Disclaimer", tabName = "disclaimer") %>%
-                                    # shiny::tagAppendAttributes(
-                                    #   style = "display:none;"
-                                    # )
-      ),
+                                  ),
       width = "250px"
     ),
     body = shinydashboard::dashboardBody(
@@ -58,10 +54,8 @@ ui <- function() {
         # Global vic css
         tags$link(href = "globalvic.css", rel = "stylesheet"),
         # Launchpad links (client side execution)
-        #shiny::tags$script("$(document).ready(function(){$('a.launchpadLink').click(function(){$('.sidebar-menu a[data-value=\"launchpad\"]').trigger('click');})});"),
-        #shiny::tags$script("$(document).ready(function(){$('a.methodologyLink').click(function(){$('.sidebar-menu a[data-value=\"methodology\"]').trigger('click');})});"),
-        #shiny::tags$script("$(document).ready(function(){$('a.disclaimerLink').click(function(){$('.sidebar-menu a[data-value=\"disclaimer\"]').trigger('click');})});"),
-        
+        #shiny::tags$script("$(document).ready(function(){$('a.launchpadLink').click(function(){$('.sidebar-menu a[data-value=\"launchpad\"]').trigger('click');})});")
+
         # Resize highcharts on sidebar collapse
         shiny::tags$script(src = "sidebar_chart_resize.JS")
       ),

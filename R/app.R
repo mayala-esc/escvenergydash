@@ -56,7 +56,7 @@
 
 dashbapp <- function(...){
 
-  shinyApp(ui = ui, server = server)
+  shiny::shinyApp(ui = ui, server = server)
 
 }
 
