@@ -3,14 +3,20 @@
 # badges on top right corner of dash
 
 badge_vec <- function(...){
-  
-  
+
+
   d <- loadtabs()
-  
-  m <- d$offers_elec_vdo_median %>% pull(identifier_date) %>% max() %>% lubridate::month(label = TRUE, abbr = FALSE)
-  y <- d$offers_elec_vdo_median %>% pull(identifier_date) %>% max() %>% lubridate::year()
-  
-  
+
+  m <- d$offers_elec_vdo_median %>%
+    dplyr::pull(identifier_date) %>%
+    max() %>% lubridate::month(label = TRUE, abbr = FALSE)
+
+  y <- d$offers_elec_vdo_median %>%
+    dplyr::pull(identifier_date) %>%
+    max() %>%
+    lubridate::year()
+
+
   tags$button(
     #onclick="window.open('https://compare.energy.vic.gov.au/','mywindow');",
     class = "sourceBadge",
